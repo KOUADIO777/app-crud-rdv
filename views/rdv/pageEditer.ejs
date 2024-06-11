@@ -1,0 +1,29 @@
+<form action="/batiment/fidele/update/<%= userRdv._id %>" method="POST">
+    <div class="form-group">
+    <label for="nom">Nom </label>
+        <input type="text" name="nom" placeholder="nom"class="form-control" value="<%= userRdv.nom %>">
+    <label for="prenoms">prenoms</label>
+    <input type="text" name="prenoms" placeholder="prenoms"class="form-control" value="<%= userRdv.prenoms %>">
+    <label for="mouvement">mouvement</label>
+    <input type="text" name="motif" placeholder="motif"class="form-control" value="<%= userRdv.mouvement %>">
+    <label for="fonction">fonction</label>
+    <input type="text" name="fonction" placeholder="fonction"class="form-control" value="<%= userRdv.fonction%>" >
+    <label for="date">date</label>
+    <input type="date" name="date" placeholder="date"class="form-control" value="<%= userRdv.date %>">
+
+    <label for="heure">heure</label>
+    <input type="time" name="heure" placeholder="heure"class="form-control" value="<%= userRdv.heure %>">
+    <label for="mois">mois</label>
+    <input type="text" name="mois" placeholder="mois"class="form-control" value="<%= userRdv.mois %>">
+    <label for="avance">avance</label>
+    <input type="text" name="avance" placeholder="avance"class="form-control" value="<%= userRdv.avance %>">
+    <label for="restePayer">restePayer</label>
+    <input type="text" name="response" placeholder="restePayer"class="form-control" value="<%=  userRdv.restePayer %>">
+    
+    <label for="status">status</label>
+    <input type="text" name="status" placeholder="status"class="form-control" value="<%=  userRdv.status %>">
+
+    <label for="username">Username</label>
+    <input type="text" name="username" placeholder="username"class="form-control" value="<%=  userRdv.username %>">
+    <input type="submit" value="Modifier">
+    </form>

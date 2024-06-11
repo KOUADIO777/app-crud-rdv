@@ -1,0 +1,67 @@
+<table border="2">
+  <tr>
+      <td>N°</td>
+     <td>
+        nom
+     </td> 
+     <td>
+
+       prenoms
+     </td>
+     <td>
+      mouvement
+      </td>
+      <td>
+        fonction
+      </td>
+      <td>
+          date
+
+
+
+     </td>
+     <td>
+      heure
+ </td>
+ <td>
+  mois
+</td>
+<td>
+  avance
+</td> 
+<td>
+  restePayer
+</td> 
+<td>
+  status
+</td> 
+     <td>
+      username
+     </td>
+    <td>actions</td>
+  </tr>
+<% listeRDV.forEach((rdv, i) => { %>
+  <tr> 
+      <td><%= i+1 %></td>
+      <td><%= rdv.nom %></td>
+      <td> <%= rdv.prenoms %></td>
+      <td><%= rdv.mouvement %></td>
+      <td><%= rdv.fonction %></td>
+      <td><%= rdv.date %></td>
+      <td><%= rdv.heure %></td>
+      <td><%= rdv.mois%></td>
+      <td><%= rdv.avance %></td>
+      <td><%= rdv.restePayer %></td>
+      <td><%= rdv.status %></td>
+      <td><%= rdv.username %></td>
+      <td> <a href="/batiment/pageConsult/<%= rdv._id %>">Consulter</a></button>
+      <form action="/batiment/fidele/delete/<%= rdv._id %>" method="POST">
+          <button type="submit">Supprimer</button>
+      </form>
+       <a href="/fidele/pageEdit/<%= rdv._id %>">Modifier</a></td>
+      </tr>
+     
+<% }) %>
+
+ 
+</table>
